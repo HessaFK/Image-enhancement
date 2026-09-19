@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+
+# Temporary / generated files
+*.tmp
+*.log
+outputs/
+results/
+
+# Upstream Real-ESRGAN source is not required by the current backend
+Real-ESRGAN/
+
+# BasicSR unnecessary test data / generated files
+BasicSR/tests/data/
+BasicSR/**/__pycache__/
+BasicSR/.github/
+BasicSR/docs/
+BasicSR/colab/
+
+# BasicSR files not needed by the current backend
+BasicSR/options/
+BasicSR/scripts/
+BasicSR/tests/
+BasicSR/test_scripts/
+BasicSR/inference/
+BasicSR/basicsr/data/meta_info/
+
