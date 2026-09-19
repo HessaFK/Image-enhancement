@@ -3,16 +3,8 @@
 This project has 2 parts:
 
 - `backend/` — a small Python server. It receives an image and sends back an "enhanced" one.
-  Right now it fakes the enhancement (simple upscale) so everything works today.
 - `frontend/` — one HTML file. This is the actual webpage people will see and use.
-
-You do NOT need to touch the frontend again after today. Later, your team only
-edits ONE function inside `backend/main.py` (called `enhance_image`) to plug in
-your real trained model.
-
 ---
-
-## STEP 1 — Run it on your own computer first (to test)
 
 ### 1a. Run the backend
 
