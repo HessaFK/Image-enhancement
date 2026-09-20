@@ -19,9 +19,9 @@ from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
-# ============================================================
+
 # PATHS
-# ============================================================
+
 
 # Project structure:
 #
@@ -45,9 +45,9 @@ sys.path.insert(0, str(BASICSR_PATH))
 from basicsr.archs.rrdbnet_arch import RRDBNet
 
 
-# ============================================================
+
 # SETTINGS
-# ============================================================
+
 
 DEVICE = torch.device("cpu")
 
@@ -57,9 +57,9 @@ FT_MODEL_PATH = MODELS_PATH / "realesrgan_finetuned_2000.pth"
 PRETRAINED_MODEL_PATH = MODELS_PATH / "RealESRGAN_x4plus.pth"
 
 
-# ============================================================
+
 # MODEL LOADING
-# ============================================================
+
 
 def create_model():
     """Create the RRDBNet architecture used by both checkpoints."""
@@ -117,9 +117,9 @@ print("Both models are ready.")
 print("=" * 60)
 
 
-# ============================================================
+
 # FASTAPI
-# ============================================================
+
 
 app = FastAPI(title="Image Quality Enhancement API")
 
@@ -131,9 +131,7 @@ app.add_middleware(
 )
 
 
-# ============================================================
 # IMAGE ENHANCEMENT
-# ============================================================
 
 def enhance_image(image: Image.Image) -> Image.Image:
     """
@@ -195,10 +193,7 @@ def enhance_image(image: Image.Image) -> Image.Image:
 
     return output_image
 
-
-# ============================================================
 # API ROUTES
-# ============================================================
 
 @app.get("/")
 def read_root():
